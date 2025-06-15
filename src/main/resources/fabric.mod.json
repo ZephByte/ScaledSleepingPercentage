@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "scaledsleepingpercentage",
+  "version": "${version}",
+  "name": "ScaledSleepingPercentage",
+  "description": "A simple mod that allows the playersSleepingPercentage to scale based on the number of players.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/scaledsleepingpercentage/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.zephbyte.scaledsleepingpercentage.ScaledSleepingPercentage"
+    ]
+  },
+  "mixins": [
+    "scaledsleepingpercentage.mixins.json",
+    {
+      "config": "scaledsleepingpercentage.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
