@@ -42,12 +42,6 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
-
-    // Config
-    maven {
-        name = "wispForest"
-        url = uri("https://maven.wispforest.io/releases/")
-    }
 }
 
 dependencies {
@@ -59,10 +53,8 @@ dependencies {
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
 
-    // owo Config
-    modImplementation("io.wispforest:owo-lib:${project.property("owo_version")}")
-    kapt("io.wispforest:owo-lib:${project.property("owo_version")}")
-    include("io.wispforest:owo-sentinel:${project.property("owo_version")}")
+    // Config
+    modImplementation("com.electronwill.night-config:toml:${project.property("night_config_version")}")
 }
 
 tasks.processResources {
