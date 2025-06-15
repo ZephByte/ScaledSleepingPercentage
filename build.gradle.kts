@@ -4,6 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "2.1.21"
     id("fabric-loom") version "1.10.1"
+    id("org.jetbrains.kotlin.kapt") version "2.1.21"
     id("maven-publish")
 }
 
@@ -59,8 +60,9 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
 
     // owo Config
-    modImplementation ("io.wispforest:owo-lib:${project.property("owo_version")}")
-    include ("io.wispforest:owo-sentinel:${project.property("owo_version")}")
+    modImplementation("io.wispforest:owo-lib:${project.property("owo_version")}")
+    kapt("io.wispforest:owo-lib:${project.property("owo_version")}")
+    include("io.wispforest:owo-sentinel:${project.property("owo_version")}")
 }
 
 tasks.processResources {
