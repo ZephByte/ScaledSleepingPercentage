@@ -1,7 +1,6 @@
 package com.zephbyte.scaledsleepingpercentage
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig
-import com.electronwill.nightconfig.core.file.FileNotFoundAction
 import com.electronwill.nightconfig.core.io.WritingMode
 import net.fabricmc.loader.api.FabricLoader
 
